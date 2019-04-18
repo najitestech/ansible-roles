@@ -14,7 +14,7 @@
 - name: Creating a text file
   file:
     name: GITHUB-REPOS
-    path: /etc/ansible/
+    path: /root/
     mode: 0775
     owner: root
     state: directory
