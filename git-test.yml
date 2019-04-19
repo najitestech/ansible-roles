@@ -1,0 +1,26 @@
+---
+- name: About to pull roles from Github repo
+  hosts: terraform
+  gather_facts: True
+  become: yes
+  tasks:
+  - name: Making a directory
+    file:
+      name: GitHub-Repo
+      path: /etc/ansible/
+      mode: 0775
+      owner: root
+      state: directory
+    delegate_to: localhost
+
+  - name: Pulling roles from Github
+    git: 
+      repo: https://github.com/najitestech/ansible-roles.git
+      dest: /etc/ansible/GitHub-Repo
+      version: master
+      update: no
+      accept_hostkey: no
+    delegate_to: localhost
+      
+  - name: Icluding ansible role
+    include_tasks: GitHub-Repo/roles/web-apps.yml
