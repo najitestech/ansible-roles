@@ -7,7 +7,7 @@
 
 #- name: Installing nginx Ubuntu server
 #  apt:
-#    name: [ '[nginx, apache2, python-pip' ]
+#    name: [ 'nginx, apache2, python-pip' ]
 #    state: present
 #  when: ansible_distribution == "Ubuntu"
 
