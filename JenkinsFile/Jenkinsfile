@@ -37,6 +37,7 @@
         stage(Trigger_Ansible_Tower) {
             steps {
                 ansibleTower(
+		     templateType: 'job',	
                      jobTemplate: 'Deploy-update',    
                      towerServer: 'Ansible Tower-ENV'
               )
