@@ -2,6 +2,7 @@
 - name: About to run a test playbook 
   hosts: all
   gather_facts: True
+  become_user: root
   become_method: yes
   roles:
     - { role: update.yml }
