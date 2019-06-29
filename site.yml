@@ -5,4 +5,4 @@
   become_user: root
   become_method: yes
   roles:
-    - { role: update.yml }
+    - { role: update }
