@@ -42,6 +42,6 @@
                      towerServer: 'Ansible Tower-ENV'
               )
             }
- 	    }
+ 	}
     }
 } 
