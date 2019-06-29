@@ -1,0 +1,21 @@
+---
+- name: Installing nginx on Centos server
+  yum:
+    name: [ 'nginx, httpd, python-pip' ]
+    state: present
+  when: ansible_distribution == "CentOS"
+
+- name: Installing nginx Ubuntu server
+  apt:
+    name: [ 'nginx, apache2, python-pip' ]
+    state: present
+  when: ansible_distribution == "Ubuntu"
+
+- name: Creating a text file
+  file:
+    name: GITHUB-REPOS
+    path: /root/
+    mode: 0775
+    owner: root
+    state: directory
+  tags: file
