@@ -1,8 +1,8 @@
   pipeline {
-    agent {label 'linux'}
+    agent any
     environment{
         WORKSPACE = "WORKSPACE"
-        PING = "ping tjxansible.tjx.com -c4"
+        PING = "ping google.com -c4"
     }
 
     stages {
