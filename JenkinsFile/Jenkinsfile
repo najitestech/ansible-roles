@@ -1,0 +1,46 @@
+  pipeline {
+    agent {label 'linux'}
+    environment{
+        WORKSPACE = "WORKSPACE"
+        PING = "ping tjxansible.tjx.com -c4"
+    }
+
+    stages {
+	    stage('Status_Update') {
+            steps {
+	            echo 'Building...This is just a testing pipeline'
+                sh 'pwd'
+                sh 'uname -s'
+                sh 'hostname'
+                sh 'whoami'
+            }
+       }
+
+        stage('Test') {
+            steps {
+		        echo 'Ping Successful...'
+                sh '$PING'
+	        }
+        }
+	    stage(Monitoring) {
+	        steps {
+	            echo 'Monitoring'
+                sh 'ansible --version'
+                //sh 'cat /etc/ansible/ansible.cfg'
+	        }
+        }
+	    stage(Success) {
+	        steps {
+	            echo 'This Job was Successful'
+		    }
+	    }
+        stage(Trigger_Ansible_Tower) {
+            steps {
+                ansibleTower(
+                     jobTemplate: 'https://tjxansible.tjx.com/#/templates/job_template/359',    
+                     towerServer: 'Ansible Towwer-ENV'
+              )
+            }
+ 	    }
+    }
+} 
