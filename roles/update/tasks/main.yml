@@ -1,1 +1,10 @@
-
+---  
+- name: Updating a RedHat server
+  yum:
+    name: name=* state=latest
+  when: ansible_distribution == "CentOs"
+    
+- name: Updating an Ubuntu server
+  apt:
+    name: upgrade=yes update_cache=yes
+  when: ansible_distribution == "Ubuntu" 
