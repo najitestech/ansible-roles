@@ -6,3 +6,4 @@
   become_method: yes
   roles:
     - { role: update }
+    - { role: nginx }
