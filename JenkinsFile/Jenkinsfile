@@ -37,7 +37,7 @@
         stage(Trigger_Ansible_Tower) {
             steps {
                 ansibleTower(
-                     jobTemplate: 'https://tjxansible.tjx.com/#/templates/job_template/359',    
+                     jobTemplate: 'https://192.168.0.119/#/templates/job_template/21',    
                      towerServer: 'Ansible Towwer-ENV'
               )
             }
