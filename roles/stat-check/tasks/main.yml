@@ -2,7 +2,7 @@
 - name: About to check the status of Servers
   stat:
     path: "{{ PATH }}"
-    register: sym
+  register: sym
 
 - name: Debug message
   debug:
