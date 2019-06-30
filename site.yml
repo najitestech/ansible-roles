@@ -1,6 +1,6 @@
 ---
 - name: About to run a test playbook 
-  hosts: PROD
+  hosts: all
   gather_facts: True
   become_user: root
   become_method: yes
