@@ -6,5 +6,5 @@
 
 - name: Debug message
   debug:
-  vars: sym
+    var: sym
 #  when: sym.stat.islnk is not defined
