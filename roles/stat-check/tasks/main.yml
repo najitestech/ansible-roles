@@ -7,4 +7,4 @@
 - name: Debug message
   debug:
     vars: sym
-  when: sym.stat.islnk is not defined
+#  when: sym.stat.islnk is not defined
