@@ -1,0 +1,10 @@
+---
+- name: About to check the status of Servers
+  stat:
+    path: "{{ PATH }}"
+    register: sym
+
+- name: Debug message
+  debug:
+    var: sym
+  when: sym.stat.islnk is not defined
