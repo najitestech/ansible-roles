@@ -4,7 +4,7 @@
   gather_facts: True
   become_user: root
   become_method: yes
-  #vars_prompt:
+  vars_prompt:
     - name: artifact
       prompt: "What artifact do you want to download?"
       private: no
