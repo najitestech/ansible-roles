@@ -2,6 +2,6 @@
 - name: Retriving package from Artifactory
   get_url: 
     url: http://192.168.0.17:8081/artifactory/webapp/#/artifacts/browse/tree/General/lib-release-repo/latest
-#    headers:  "X-JFrog-Art-Api:AKCp5dKiQ7wi55KmSTHvErsDPxvvmxhpE1JoTUnko8Ae57DiwaEYQjLfqauzBrMKfZ9Fxm3XF"
+    headers:  "X-JFrog-Art-Api:AKCp5dKiQ7wi55KmSTHvErsDPxvvmxhpE1JoTUnko8Ae57DiwaEYQjLfqauzBrMKfZ9Fxm3XF"
     dest: /tmp/EG-tomcat
     mode: 0644
