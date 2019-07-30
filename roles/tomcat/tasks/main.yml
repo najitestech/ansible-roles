@@ -1,6 +1,6 @@
 ---
 - name: Retriving package from Artifactory
   get_url: 
-    url: http://192.168.0.17:8081/artifactory/webapp/#/artifacts/browse/tree/General/lib-release-repo/multi-3.7-snapshot-1.0
+    url: http://192.168.0.17:8081/artifactory/webapp/#/artifacts/browse/tree/General/lib-release-repo/ '{{ artifact }}"
     dest: /opt/tomcat/tomcat9/webapps/Artifactory
     mode: 0644
