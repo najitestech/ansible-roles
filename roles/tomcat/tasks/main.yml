@@ -1,7 +1,7 @@
 ---
 - name: Retriving package from Artifactory
   get_url: 
-#    url: curl -uadmin:APAj1tt9wLaFZZpqAzf1Ue5mjWU -O "http://192.168.0.17:8081/artifactory/example-repo-local/multi-3.7-snapshot-1.0"
-    url: http://192.168.0.17:8081/artifactory/example-repo-local/multi-3.7-snapshot-1.0
+    url: curl -uadmin:APAj1tt9wLaFZZpqAzf1Ue5mjWU -O "http://192.168.0.17:8081/artifactory/example-repo-local/multi-3.7-snapshot-1.0"
+    headers:  "X-JFrog-Art-Api:API_KEY"
     dest: /tmp/EG-tomcat
     mode: 0644
