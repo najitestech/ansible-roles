@@ -1,5 +1,5 @@
 ---
-- name: About to run a test playbook 
+- name: Ansible get Artifact and deploy package to Tomcat server 
   hosts: all
   gather_facts: True
   become_user: root
