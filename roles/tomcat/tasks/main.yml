@@ -2,5 +2,5 @@
 - name: Retriving package from Artifactory
   get_url: 
     url: http://192.168.0.17:8081/artifactory/webapp/#/artifacts/browse/tree/General/lib-release-repo/ '{{ artifact }}"
-    dest: /opt/tomcat/tomcat9/webapps/Execution-Group-01
+    dest: /opt/tomcat/tomcat9/webapps/ "{{ Execution-Group }}"
     mode: 0644
