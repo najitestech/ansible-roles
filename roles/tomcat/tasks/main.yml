@@ -1,8 +1,9 @@
 ---
 - name: Creating an Execution-Group directory
   file:
-    path: /opt/tomcat/tomcat9/ "{{ EG }}"
+    path: /opt/tomcat/tomcat9/webapps/ "{{ EG }}"
     mode: 0777
+    owner: root
     state: directory
     
 - name: Retriving package from Artifactory
