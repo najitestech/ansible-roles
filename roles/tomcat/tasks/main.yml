@@ -8,8 +8,6 @@
     
 - name: Retriving package from Artifactory
   get_url: 
-    url: http://192.168.0.17:8081/artifactory/webapp/#/artifacts/browse/tree/General/lib-release-repo/"{{ artifact }}"
-    dest: /opt/tomcat/tomcat9/webapps/"{{ EG }}"
+    url: http://192.168.0.17:8081/artifactory/webapp/#/artifacts/browse/tree/General/lib-release-repo/{{ artifact }}
+    dest: /opt/tomcat/tomcat9/webapps/{{ EG }}
     mode: 0644
-    
-    
