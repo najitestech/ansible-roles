@@ -5,7 +5,7 @@
     mode: 0644
     owner: root
     state: directory
-  when: absent
+  when: present
     
 - name: Retriving package from Artifactory
   get_url: 
