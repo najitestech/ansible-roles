@@ -1,7 +1,7 @@
 ---
 - name: Creating an Execution-Group directory
   file:
-    path: /opt/tomcat/tomcat9/webapps/ "{{ EG }}"
+    path: /opt/tomcat/tomcat9/webapps/"{{ EG }}"
     mode: 0644
     owner: root
     state: directory
