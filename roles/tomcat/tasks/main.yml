@@ -1,7 +1,7 @@
 ---
 - name: Creating an Execution-Group directory
   file:
-    path: /opt/tomcat/tomcat9/webapps/{{EG}}
+    path: /var/lib/tomcat/webapps/{{EG}}
     mode: 0644
     owner: root
     state: directory
@@ -9,5 +9,5 @@
 - name: Retriving package from Artifactory
   get_url: 
     url: http://192.168.0.17:8081/artifactory/webapp/#/artifacts/browse/tree/General/lib-release-repo/{{ artifact }}
-    dest: /opt/tomcat/tomcat9/webapps/{{EG}}/
+    dest: /var/lib/tomcat/webapps/{{EG}}/
     mode: 0644
