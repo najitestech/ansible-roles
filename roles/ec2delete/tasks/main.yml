@@ -1,0 +1,18 @@
+---
+- name: Terminate Instances
+  ec2:
+    region: us-east-2
+    register: ec2_info
+ 
+- name: displaying output
+  debug: msg="{{item.instance_id}}"
+    with_items: "{{ec2_info.instances}}"
+ 
+- name: terminate
+  ec2:
+    instance_ids: "{{item.instance_id}}"
+    region: us-east-2
+    state: absent
+    wait: yes
+  with_items: "{{ec2_info.instances}}"
+  when: state == absent
