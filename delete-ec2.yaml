@@ -1,0 +1,8 @@
+
+---
+- hosts: localhost
+  connection: local
+  tasks:
+  
+  roles:
+  - ec2-delete
