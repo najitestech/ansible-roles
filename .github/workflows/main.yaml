@@ -5,6 +5,8 @@ on:
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    container:
+      image: node:14.16
     
     steps:
       - name: Check out repository code
