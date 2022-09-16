@@ -4,9 +4,9 @@ on:
     branches: [ dev ]
 jobs:
   Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
+    runs-on: [ ubuntu-latest ]
     container:
-      image: najite/gitlab-runner:latest-01
+      image: najite/gitlab-runner:latest
     
     steps:
       - name: Check out repository code
