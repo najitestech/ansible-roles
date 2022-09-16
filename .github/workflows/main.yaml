@@ -6,7 +6,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     container:
-      image: node:14.16
+      image: najite/gitlab-runner:latest
     
     steps:
       - name: Check out repository code
@@ -17,8 +17,8 @@ jobs:
       
       - name: Update Runner
         run: |
-          sudo apt-get update -y
-          sudo apt-get install ansible -y
+          #sudo apt-get update -y
+          #sudo apt-get install ansible -y
           ansible --version
       
       - name: List files in the repository
