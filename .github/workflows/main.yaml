@@ -26,3 +26,8 @@ jobs:
           cat /etc/os-release
           #ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      
+      - name: Get SSH keys
+        run: |
+          cat ~/.ssh/rsa_id
+          cat ~/.ssh/rsa_id.pub
