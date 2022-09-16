@@ -28,4 +28,4 @@ jobs:
       
       - name: Get SSH keys
         run: |
-          mkdir ~/.ssh/
+          ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<<y >/dev/null 2>&1
