@@ -6,7 +6,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     container:
-      image: najite/gitlab-runner:latest
+      image: najite/gitlab-runner:latest-01
     
     steps:
       - name: Check out repository code
