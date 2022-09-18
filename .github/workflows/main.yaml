@@ -27,11 +27,7 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       
       - name: Run ansible-lint
-        # replace `main` with any valid ref, or tags like `v6`
         uses: ansible-community/ansible-lint-action@v6.0.2
         with:
-          args: "ansible" # my ansible files in a folder
+          args: "ansible"
       
-      - name: Get SSH keys
-        run: |
-          ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<<y >/dev/null 2>&1
