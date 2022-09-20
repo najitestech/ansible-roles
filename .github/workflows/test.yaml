@@ -1,0 +1,16 @@
+name: GitHub Actions Test
+on:
+  push:
+    branches: [ dev ]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: [ ubuntu-latest ]
+    container:
+      image: najite/gitlab-runner:latest
+    
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+        
+      - name: Test date
+        run: cal
